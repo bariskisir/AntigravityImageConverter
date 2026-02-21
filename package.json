@@ -1,0 +1,43 @@
+{
+  "name": "antigravityimageconverter",
+  "version": "1.0.2",
+  "description": "A production-ready CLI tool to convert image formats.",
+  "type": "module",
+  "main": "src/cli.js",
+  "bin": {
+    "agimgconv": "./bin/cli.js"
+  },
+  "scripts": {
+    "start": "node ./bin/cli.js"
+  },
+  "keywords": [
+    "image",
+    "converter",
+    "cli",
+    "sharp"
+  ],
+  "files": [
+    "bin",
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bariskisir/AntigravityImageConverter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bariskisir/AntigravityImageConverter/issues"
+  },
+  "homepage": "https://github.com/bariskisir/AntigravityImageConverter#readme",
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "commander": "^14.0.3",
+    "decode-ico": "^0.4.1",
+    "image-decode": "^1.2.2",
+    "jimp": "^1.6.0",
+    "ora": "^9.3.0",
+    "png-to-ico": "^3.0.1",
+    "sharp": "^0.34.5"
+  }
+}

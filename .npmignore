@@ -1,0 +1,10 @@
+test_images/
+node_modules/
+.git/
+generate_test_images.js
+transfer_generated.js
+err_report.txt
+*.log
+*.json
+!package.json
+!package-lock.json
