@@ -35,7 +35,7 @@
     "commander": "^14.0.3",
     "decode-ico": "^0.4.1",
     "image-decode": "^1.2.2",
-    "jimp": "^1.6.0",
+    "jimp": "^1.6.1",
     "ora": "^9.3.0",
     "png-to-ico": "^3.0.1",
     "sharp": "^0.34.5"
