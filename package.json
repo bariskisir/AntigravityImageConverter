@@ -1,5 +1,5 @@
 {
-  "name": "antigravityimageconverter",
+  "name": "imageconverter",
   "version": "1.0.2",
   "description": "A production-ready CLI tool to convert image formats.",
   "type": "module",
@@ -22,12 +22,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bariskisir/AntigravityImageConverter.git"
+    "url": "git+https://github.com/bariskisir/ImageConverter.git"
   },
   "bugs": {
-    "url": "https://github.com/bariskisir/AntigravityImageConverter/issues"
+    "url": "https://github.com/bariskisir/ImageConverter/issues"
   },
-  "homepage": "https://github.com/bariskisir/AntigravityImageConverter#readme",
+  "homepage": "https://github.com/bariskisir/ImageConverter#readme",
   "author": "",
   "license": "MIT",
   "dependencies": {
