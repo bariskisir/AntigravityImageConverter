@@ -1,11 +1,11 @@
-# AntigravityImageConverter
+# ImageConverter
 
 A modern, fast, and production-ready CLI tool for converting image formats, powered by Node.js and [Sharp](https://sharp.pixelplumbing.com/).
 
 [![npm version](https://img.shields.io/npm/v/antigravityimageconverter.svg)](https://www.npmjs.com/package/antigravityimageconverter)
-[![GitHub](https://img.shields.io/github/license/bariskisir/AntigravityImageConverter)](https://github.com/bariskisir/AntigravityImageConverter)
+[![GitHub](https://img.shields.io/github/license/bariskisir/ImageConverter)](https://github.com/bariskisir/ImageConverter)
 
-[NPM Package](https://www.npmjs.com/package/antigravityimageconverter) | [GitHub Repository](https://github.com/bariskisir/AntigravityImageConverter)
+[NPM Package](https://www.npmjs.com/package/antigravityimageconverter) | [GitHub Repository](https://github.com/bariskisir/ImageConverter)
 
 ## Features
 
