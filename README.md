@@ -1,18 +1,19 @@
 # ImageConverter
 
-A modern, fast, and production-ready CLI tool for converting image formats, powered by Node.js and [Sharp](https://sharp.pixelplumbing.com/).
+A modern, fast, and production-ready TypeScript CLI for converting image formats, powered by Node.js and [Sharp](https://sharp.pixelplumbing.com/).
 
-[![npm version](https://img.shields.io/npm/v/antigravityimageconverter.svg)](https://www.npmjs.com/package/antigravityimageconverter)
+[![npm version](https://img.shields.io/npm/v/imgcon.svg)](https://www.npmjs.com/package/imgcon)
 [![GitHub](https://img.shields.io/github/license/bariskisir/ImageConverter)](https://github.com/bariskisir/ImageConverter)
 
-[NPM Package](https://www.npmjs.com/package/antigravityimageconverter) | [GitHub Repository](https://github.com/bariskisir/ImageConverter)
+[NPM Package](https://www.npmjs.com/package/imgcon) | [GitHub Repository](https://github.com/bariskisir/ImageConverter)
 
 ## Features
 
-- **Single Image Conversion**: Convert any supported image file to another format.
-- **Batch Processing**: Point to a directory and convert all supported images inside it recursively.
-- **High Performance**: Built on top of `libvips` via `sharp` for maximum speed and efficiency.
-- **User Friendly UX**: Provides elegant terminal output using `chalk` and `ora`.
+- **Single image conversion**: Convert any supported image file to another format.
+- **Batch processing**: Convert every supported image in a directory.
+- **Recursive scanning**: Preserve nested folders when converting directories with `--recursive`.
+- **High performance**: Built on top of `libvips` through `sharp`.
+- **Clean CLI output**: Uses `chalk` and `ora` for readable terminal feedback.
 
 ## Supported Formats
 
@@ -27,56 +28,62 @@ A modern, fast, and production-ready CLI tool for converting image formats, powe
 
 ## Installation
 
-You can install this package globally via npm:
+Install the package globally with npm:
 
 ```bash
-npm install -g antigravityimageconverter
+npm install -g imgcon
 ```
 
 ## Usage
 
-### Usage Command
-
 ```bash
-agimgconv <input> --to <format> [options]
+imgcon <input> --to <format> [options]
 ```
 
-- `<input>`: Can be a path to a single file or a directory containing images.
-- `-t, --to <format>`: The target format you want to convert the images to.
-- `-o, --out <dir>`: (Optional) Specify an output directory for the converted files. If not provided, saves in the same folder.
-- `-r, --recursive`: (Optional) If the input is a directory, searches for images in all subdirectories as well.
-- `-q, --quality <number>`: (Optional) Set the output image quality (1-100) for supported formats (JPG, WEBP, AVIF, TIFF).
+- `<input>`: Path to a single image file or a directory containing images.
+- `-t, --to <format>`: Target output format.
+- `-o, --out <dir>`: Output directory. Defaults to the input location.
+- `-r, --recursive`: Recursively scan subdirectories.
+- `-q, --quality <number>`: Output quality from 1 to 100 for JPG, WEBP, AVIF, and TIFF.
 
-### Examples
+## Examples
 
-**Convert a single image:**
-
-```bash
-agimgconv input.jpg --to png
-agimgconv image.png --to webp
-```
-
-**Convert an entire directory (recursively):**
+Convert a single image:
 
 ```bash
-agimgconv ./images --to avif --recursive
+imgcon input.jpg --to png
+imgcon image.png --to webp
 ```
 
-**Convert an entire directory (recursively) with a specific quality:**
+Convert a directory recursively:
 
 ```bash
-agimgconv ./images --to webp --out ./dist/images --recursive --quality 80
+imgcon ./images --to avif --recursive
 ```
 
-**View Help Page:**
+Convert a directory recursively with a specific quality:
 
 ```bash
-agimgconv --help
+imgcon ./images --to webp --out ./dist/images --recursive --quality 80
 ```
 
-## Developer Notes
+Open the help page:
 
-This package uses ES Modules (`"type": "module"`) and modern JavaScript features.
+```bash
+imgcon --help
+```
+
+## Development
+
+```bash
+npm install
+npm run build
+npm start -- ./test_images --to webp --out ./converted --recursive
+```
+
+## Publishing
+
+The package publishes to npm through GitHub Actions when a git tag is pushed. The workflow verifies that the tag version matches `package.json`, builds the TypeScript source, checks package contents, and publishes with npm provenance.
 
 ## License
 

@@ -1,14 +1,17 @@
 {
-  "name": "imageconverter",
-  "version": "1.0.2",
-  "description": "A production-ready CLI tool to convert image formats.",
+  "name": "imgcon",
+  "version": "1.1.0",
+  "description": "A production-ready TypeScript CLI tool to convert image formats.",
   "type": "module",
-  "main": "src/cli.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "bin": {
-    "agimgconv": "./bin/cli.js"
+    "imgcon": "./dist/cli.js"
   },
   "scripts": {
-    "start": "node ./bin/cli.js"
+    "build": "tsc -p tsconfig.json",
+    "prepack": "npm run build",
+    "start": "node ./dist/cli.js"
   },
   "keywords": [
     "image",
@@ -17,8 +20,9 @@
     "sharp"
   ],
   "files": [
-    "bin",
-    "src"
+    "dist",
+    "LICENSE",
+    "README.md"
   ],
   "repository": {
     "type": "git",
@@ -30,6 +34,9 @@
   "homepage": "https://github.com/bariskisir/ImageConverter#readme",
   "author": "",
   "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
   "dependencies": {
     "chalk": "^5.6.2",
     "commander": "^14.0.3",
@@ -39,5 +46,9 @@
     "ora": "^9.3.0",
     "png-to-ico": "^3.0.1",
     "sharp": "^0.34.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.25",
+    "typescript": "^5.9.3"
   }
 }
